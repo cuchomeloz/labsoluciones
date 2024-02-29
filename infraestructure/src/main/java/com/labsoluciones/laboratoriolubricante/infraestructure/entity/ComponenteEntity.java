@@ -33,4 +33,7 @@ public class ComponenteEntity {
     private Timestamp dateDelet;
 
     // Relacion con equipo
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_equipo")
+    private EquipoEntity equipo;
 }

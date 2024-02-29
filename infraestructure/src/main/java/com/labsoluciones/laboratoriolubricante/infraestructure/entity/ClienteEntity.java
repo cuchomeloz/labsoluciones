@@ -13,15 +13,15 @@ import java.sql.Timestamp;
 public class ClienteEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cliente_id")
-    private Long clienteId;
+    @Column(name = "id_cliente")
+    private Long idCliente;
     @Column(name = "ruc", nullable = false, length = 15)
     private String ruc;
     @Column(name = "razon_social", nullable = false, length = 200)
     private String razonSocial;
     @Column(name = "estado", nullable = false)
     private Integer estado;
-    @Column(name = "usua_crea", length = 45)
+    @Column(name = "usua_create", length = 45)
     private String usuaCrea;
     @Column(name = "date_create")
     private Timestamp dateCreate;
@@ -29,8 +29,8 @@ public class ClienteEntity {
     private String usuaModif;
     @Column(name = "date_modif")
     private Timestamp dateModif;
-    @Column(name = "usua_delet", length = 45)
+    @Column(name = "usua_delete", length = 45)
     private String usuaDelet;
-    @Column(name = "date_delet")
+    @Column(name = "date_delete")
     private Timestamp dateDelet;
 }

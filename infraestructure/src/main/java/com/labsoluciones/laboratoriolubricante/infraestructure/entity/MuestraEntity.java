@@ -26,7 +26,7 @@ public class MuestraEntity {
 
     @Column(name = "estado", nullable = false)
     private Integer estado;
-    @Column(name = "usua_crea", length = 45)
+    @Column(name = "usua_create", length = 45)
     private String usuaCrea;
     @Column(name = "date_create")
     private Timestamp dateCreate;
@@ -34,11 +34,20 @@ public class MuestraEntity {
     private String usuaModif;
     @Column(name = "date_modif")
     private Timestamp dateModif;
-    @Column(name = "usua_delet", length = 45)
+    @Column(name = "usua_delete", length = 45)
     private String usuaDelet;
-    @Column(name = "date_delet")
+    @Column(name = "date_delete")
     private Timestamp dateDelet;
 
     // Rleacion con Solicitud, Componente, Lubricante
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_solicitud")
+    private SolicitudEntity solicitud;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_componente")
+    private ComponenteEntity componente;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_lubricante")
+    private LubricanteEntity lubricante;
 
 }

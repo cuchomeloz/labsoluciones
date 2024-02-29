@@ -13,17 +13,17 @@ import java.sql.Timestamp;
 public class EquipoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "equipo_id")
-    private Long equipoId;
-    @Column(name = "nomEquipo", nullable = false)
-    private String nom_equipo;
+    @Column(name = "id_equipo")
+    private Long idEquipo;
+    @Column(name = "nom_equipo", nullable = false)
+    private String nomEquipo;
     @Column(name = "marca", nullable = false)
     private String marca;
     @Column(name = "modelo", nullable = false)
     private String modelo;
     @Column(name = "estado", nullable = false)
     private Integer estado;
-    @Column(name = "usua_crea", length = 45)
+    @Column(name = "usua_create", length = 45)
     private String usuaCrea;
     @Column(name = "date_create")
     private Timestamp dateCreate;
@@ -31,10 +31,13 @@ public class EquipoEntity {
     private String usuaModif;
     @Column(name = "date_modif")
     private Timestamp dateModif;
-    @Column(name = "usua_delet", length = 45)
+    @Column(name = "usua_delete", length = 45)
     private String usuaDelet;
-    @Column(name = "date_delet")
+    @Column(name = "date_delete")
     private Timestamp dateDelet;
 
     // Relacion con Cliente
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_cliente", nullable = false)
+    private ClienteEntity cliente;
 }

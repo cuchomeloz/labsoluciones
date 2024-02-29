@@ -17,18 +17,21 @@ public class SolicitudEntity {
     private Long idSolicitud;
     @Column(name = "estado", nullable = false)
     private Integer estado;
-    @Column(name = "usua_crea", length = 45)
-    private String usuaCrea;
+//    @Column(name = "usua_create", length = 45)
+//    private String usuaCrea;
     @Column(name = "date_create")
     private Timestamp dateCreate;
     @Column(name = "usua_modif", length = 45)
     private String usuaModif;
     @Column(name = "date_modif")
     private Timestamp dateModif;
-    @Column(name = "usua_delet", length = 45)
+    @Column(name = "usua_delete", length = 45)
     private String usuaDelet;
-    @Column(name = "date_delet")
+    @Column(name = "date_delete")
     private Timestamp dateDelet;
 
     // Relacion con Usuario
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "usua_create", nullable = false)
+    private UsuarioEntity usuario;
 }
