@@ -1,5 +1,6 @@
 package com.labsoluciones.laboratoriolubricante.domain.ports.in;
 
+import com.labsoluciones.laboratoriolubricante.domain.aggregates.dto.ComponenteDTO;
 import com.labsoluciones.laboratoriolubricante.domain.aggregates.dto.EquipoDTO;
 import com.labsoluciones.laboratoriolubricante.domain.aggregates.request.RequestComponente;
 
@@ -7,9 +8,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ComponenteServiceIn {
-    EquipoDTO crearComponenteIn(RequestComponente requestComponente);
-    Optional<EquipoDTO> obtenerComponenteIn(Long id);
-    List<EquipoDTO> obtenerTodosIn();
-    EquipoDTO actualizarIn(Long id, RequestComponente requestComponente);
-    EquipoDTO deleteIn(Long id);
+    ComponenteDTO crearComponenteIn(RequestComponente requestComponente);
+    Optional<ComponenteDTO> obtenerComponenteIn(Long id);
+    List<ComponenteDTO> obtenerTodosIn();
+    ComponenteDTO actualizarIn(Long id, RequestComponente requestComponente);
+    ComponenteDTO deleteIn(Long id);
 }

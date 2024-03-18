@@ -19,4 +19,5 @@ public class ComponenteDTO {
     private Timestamp dateModif;
     private String usuaDelet;
     private Timestamp dateDelet;
+    private String equipo;
 }

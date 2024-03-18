@@ -4,4 +4,5 @@ import com.labsoluciones.laboratoriolubricante.infraestructure.entity.ClienteEnt
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ClienteRepository extends JpaRepository<ClienteEntity, Long> {
+    ClienteEntity findByRazonSocial(String razonSocial);
 }

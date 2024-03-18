@@ -7,4 +7,5 @@ import lombok.Setter;
 @Setter
 public class RequestComponente {
     private String nombreComponente;
+    private String nombreEquipo;
 }

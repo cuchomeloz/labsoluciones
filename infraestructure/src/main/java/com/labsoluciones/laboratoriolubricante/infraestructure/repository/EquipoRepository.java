@@ -4,4 +4,5 @@ import com.labsoluciones.laboratoriolubricante.infraestructure.entity.EquipoEnti
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EquipoRepository extends JpaRepository<EquipoEntity, Long> {
+    EquipoEntity findByNomEquipo(String nombreEquipo);
 }

@@ -21,4 +21,6 @@ public class EquipoDTO {
     private Timestamp dateModif;
     private String usuaDelet;
     private Timestamp dateDelet;
+    private String cliente;
+
 }
